@@ -1,4 +1,5 @@
-// src/app/page.tsx
+'use client'
+import { sendGTMEvent } from "@/utils/analytics";
 import Image from "next/image";
 
 export default function Home() {
@@ -25,8 +26,15 @@ export default function Home() {
           
           {/* THE CTA BUTTON - The Star of the Show */}
           <button
-            id="btn-buy-now"
-            className="mt-6 w-full rounded-full bg-amber-600 px-8 py-4 text-lg font-bold text-white transition hover:bg-amber-700 focus:outline-none focus:ring-4 focus:ring-amber-300"
+            className="..." // You can now remove the ID if you want!
+            onClick={() => {
+              sendGTMEvent('generate_lead', {
+                item_name: 'Morning Brew Kit',
+                value: 29.99,
+                currency: 'USD'
+              });
+              // Add navigation logic here if needed
+            }}
           >
             Buy Now
           </button>

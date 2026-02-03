@@ -26,7 +26,7 @@ export default function Home() {
           
           {/* THE CTA BUTTON - The Star of the Show */}
           <button
-            className="..." // You can now remove the ID if you want!
+            className="mt-6 w-full rounded-full bg-amber-600 px-8 py-4 text-lg font-bold text-white transition hover:bg-amber-700 focus:outline-none focus:ring-4 focus:ring-amber-300" 
             onClick={() => {
               sendGTMEvent('generate_lead', {
                 item_name: 'Morning Brew Kit',
